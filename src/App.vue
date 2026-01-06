@@ -1,7 +1,11 @@
 <template>
-  <Navbar :logo="logo_src" :alt="app_name"/>
-  <router-view/>
-  <Footer />
+  <div id="app">
+    <Navbar :logo="logo_src" :alt="app_name"/>
+    <main class="content">
+      <router-view/>
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -29,6 +33,19 @@ import Footer from './components/Footer.vue';
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  }
+
+  html, body, #app{
+    height: 100%;
+  }
+
+  #app{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content{
+    flex: 1;
   }
 
   .main-container{
