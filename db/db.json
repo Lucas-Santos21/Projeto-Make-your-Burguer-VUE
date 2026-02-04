@@ -81,7 +81,7 @@
       "tipo": "Finalizado"
     }
   ],
-  "burguers": [
+  "burgers": [
     {
       "id": "c45e",
       "nome": "Lucas Santos ",
@@ -104,6 +104,19 @@
         "Tomate",
         "Cheddar",
         "Pepino"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "229d",
+      "nome": "Carlo",
+      "pao": "Italiano Branco",
+      "carne": "Picanha",
+      "opcionais": [
+        "Cheddar",
+        "Salame",
+        "Tomate",
+        "Cebola roxa"
       ],
       "status": "Solicitado"
     }
