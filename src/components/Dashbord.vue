@@ -25,10 +25,13 @@
                     </ul>
                 </div>
                 <div>
-                    <select name="status" class="status">
+                    <select name="status" class="status" @change="updateBurguer($event, burger.id)">
                         <option value="">Selecione</option>
+                        <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">
+                            {{ s.tipo }}
+                        </option>
                     </select>
-                    <button class="delete-btn">Cancelar</button>
+                    <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
                 </div>
             </div>
             
@@ -52,11 +55,49 @@
 
                 const req = await fetch('http://localhost:3000/burgers');
                 const data = await req.json();
-
                 this.burgers = data;
 
-                console.log(this.burgers);
                 // resgatar os status
+                this.getStatus();
+
+            },
+
+            async getStatus(){
+
+                const req = await fetch('http://localhost:3000/status');
+                const data = await req.json();
+                this.status = data;
+
+            },
+            async deleteBurger(id){
+                
+                const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+                    method: "DELETE"
+                });
+
+                const res = await req.json();
+
+                //msg
+
+                this.getPedidos();
+
+            }, 
+            async updateBurguer(event, id){
+                
+                const option = event.target.value;
+
+                const dataJson = JSON.stringify({status: option});
+
+                const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                    method: "PATCH", //funciona como o update, mas so atualiza o q foi enviado
+                    headers: {"Content-type" : "application/json"},
+                    body: dataJson
+                });
+
+                const res = await req.json();
+
+                console.log(res);
+
             }
         },
         mounted(){

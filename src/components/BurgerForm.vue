@@ -104,7 +104,7 @@ import Message from './Message.vue';
                this.nome = "";
                this.pao = "";
                this.carne = "";
-               this.opcionais = "";
+               this.opcionais = [];
 
             }
         },
