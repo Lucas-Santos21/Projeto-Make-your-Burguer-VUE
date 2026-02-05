@@ -83,31 +83,6 @@
   ],
   "burgers": [
     {
-      "id": "c45e",
-      "nome": "Lucas Santos ",
-      "pao": "Italiano Branco",
-      "carne": "Picanha",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "a367",
-      "nome": "Cristiano Ronaldo",
-      "pao": "3 Queijos",
-      "carne": "Alcatra",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa",
-        "Tomate",
-        "Cheddar",
-        "Pepino"
-      ],
-      "status": "Em produção"
-    },
-    {
       "id": "229d",
       "nome": "Carlo",
       "pao": "Italiano Branco",
@@ -119,6 +94,21 @@
         "Cebola roxa"
       ],
       "status": "Solicitado"
+    },
+    {
+      "id": "923b",
+      "nome": "Lucas",
+      "pao": "Italiano Branco",
+      "carne": "Picanha",
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Pepino",
+        "Salame",
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Em produção"
     }
   ]
 }
